@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@color/white100">
+
+    <TextView
+        android:id="@+id/txtCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/cadastrar"
+        android:textColor="@color/primary"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="101dp"
+        android:layout_marginBottom="100dp"/>
+
+    <EditText
+        android:id="@+id/edtCadastrarNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="169dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtCadastrarEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Email"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="169dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtCadastrarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Senha"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="224dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtConfirmarCadastrarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/ConfirmarSenha"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="224dp"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:text="@string/cadastrar"
+        android:textColorLink="#951C1C"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="310dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtEmailIndisponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EmailIndisponivel"
+        android:textColor="@color/primary"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+</LinearLayout>
