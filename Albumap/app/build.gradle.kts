@@ -46,9 +46,16 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1");
 
+    // Date dependencies
+    implementation ("com.jakewharton.threetenabp:threetenabp:1.3.1") // ou versão mais recente
+
+
     // Google Maps dependencies
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("com.google.android.material:material:1.6.0")
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

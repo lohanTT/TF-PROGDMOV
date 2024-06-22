@@ -3,6 +3,7 @@ package com.example.albumap;
 import android.app.Application;
 
 import com.example.albumap.entities.Usuario;
+import com.jakewharton.threetenabp.AndroidThreeTen;
 
 public class MyApplication extends Application {
     private Usuario usuarioEmSessao;
@@ -11,6 +12,7 @@ public class MyApplication extends Application {
     public void onCreate(){
         super.onCreate();
         usuarioEmSessao = null;
+        AndroidThreeTen.init(this);
     }
 
     public Usuario getUsuarioEmSessao() {

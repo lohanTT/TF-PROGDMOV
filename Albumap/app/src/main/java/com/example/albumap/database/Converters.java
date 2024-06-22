@@ -2,16 +2,21 @@ package com.example.albumap.database;
 
 import androidx.room.TypeConverter;
 
-import java.util.Date;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+
 
 public class Converters {
+
+    private static DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+
     @TypeConverter
-    public static Date fromTimeStamp(Long value){
-        return value == null? null : new Date(value);
+    public static LocalDateTime fromTimestamp(String value) {
+        return value == null ? null : LocalDateTime.parse(value, formatter);
     }
 
     @TypeConverter
-    public static Long dateToTimestamp(Date date){
-        return date == null ? null : date.getTime();
+    public static String dateToTimestamp(LocalDateTime date) {
+        return date == null ? null : date.format(formatter);
     }
 }

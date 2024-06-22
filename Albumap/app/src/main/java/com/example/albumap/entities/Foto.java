@@ -4,27 +4,23 @@ import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import org.threeten.bp.LocalDateTime;
+
 import java.io.Serializable;
-import java.util.Date;
 
 @Entity(tableName = "foto")
 public class Foto implements Serializable {
     @PrimaryKey(autoGenerate = true)
     long fotoId;
-
     String uri;
-
     @Nullable
     String descricao;
-
     @Nullable
-    Date dataHora;
-
+    LocalDateTime dataHora;
     double coordX;
-
     double coordY;
 
-    public Foto(long fotoId, String uri, @Nullable String descricao, @Nullable Date dataHora, double coordX, double coordY) {
+    public Foto(long fotoId, String uri, @Nullable String descricao, @Nullable LocalDateTime dataHora, double coordX, double coordY) {
         this.fotoId = fotoId;
         this.uri = uri;
         this.descricao = descricao;
@@ -59,11 +55,11 @@ public class Foto implements Serializable {
     }
 
     @Nullable
-    public Date getDataHora() {
+    public LocalDateTime getDataHora() {
         return dataHora;
     }
 
-    public void setDataHora(@Nullable Date dataHora) {
+    public void setDataHora(@Nullable LocalDateTime dataHora) {
         this.dataHora = dataHora;
     }
 

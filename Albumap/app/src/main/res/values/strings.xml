@@ -1,9 +1,28 @@
 <resources>
     <string name="app_name">Albumap</string>
     <string name="entrar">Entrar</string>
+    <string name="sair">Sair</string>
+
+    <!--    COMPONENTS-->
     <string name="cadastrar">Cadastrar</string>
     <string name="cadastrese">Cadastre-se agora</string>
-    <string name="sair">Sair</string>
+
+    <string name="fab_add">Adicionar</string>
+    <string name="fab_camera">Usar câmera</string>
+    <string name="fab_gallery">Escolher da galeria</string>
+
+    <string name="lbl_descricao">Descrição</string>
+    <string name="add_descricao">Escreva uma legenda marcante!</string>
+
+    <string name="lbl_dataHora">Data e hora</string>
+    <string name="add_dataHora">Quando você tirou essa foto?</string>
+
+    <string name="lbl_localizacao">Localização</string>
+    <string name="add_localizacao">Onde você tirou essa foto?</string>
+
+
+
+
     <string name="cliente">Cliente</string>
     <string name="nome">Nome</string>
     <string name="Email">Email</string>
