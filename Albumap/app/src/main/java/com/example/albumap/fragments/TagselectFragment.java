@@ -51,6 +51,9 @@ public class TagselectFragment extends Fragment {
         binding = FragmentTagselectBinding.inflate(inflater);
         db = AppDatabase.getDatabase(getActivity());
         tagDAO = db.tagDAO();
+        if (selectedTags == null){
+            selectedTags = new ArrayList<>();
+        }
         View rootView = binding.getRoot();
         noTagsTagSelect = binding.NoTagsTagSelect;
         withTagsTagSelect = binding.WithTagsTagSelect;

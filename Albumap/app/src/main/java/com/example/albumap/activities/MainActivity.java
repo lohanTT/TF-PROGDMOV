@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     toaster.Short("Credenciais inválidas");
                     edtSenha.setText("");
                 }
+
             }
         });
 

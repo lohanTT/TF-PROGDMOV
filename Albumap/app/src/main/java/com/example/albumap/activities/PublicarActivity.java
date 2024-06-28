@@ -358,40 +358,50 @@ public class PublicarActivity extends AppCompatActivity {
         }
     }
     private void renderLocationPicker(){
-        try {
-            ExifInterface exifInterface = new ExifInterface(foto.getUri());
-            float[] latlong = new float[2];
-            if (exifInterface.getLatLong(latlong)){
-                double latitude = latlong[0];
-                double longitude = latlong[1];
-                getPlaceDetails(latitude, longitude);
+        if (foto.getFotoId() == 0){
+            try {
+                ExifInterface exifInterface = new ExifInterface(foto.getUri());
+                float[] latlong = new float[2];
+                if (exifInterface.getLatLong(latlong)){
+                    double latitude = latlong[0];
+                    double longitude = latlong[1];
+                    getPlaceDetails(latitude, longitude);
 
+                }
+                else {
+                    getPlaceDetails(0, 0);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            else {
-                getPlaceDetails(0, 0);
-            }
-        } catch (IOException e){
-            e.printStackTrace();
+        } else {
+            getPlaceDetails(foto.getLatitude(), foto.getlongitude());
         }
     }
     private void renderDateAndTimePicker(){
-        try {
-            ExifInterface exifInterface = new ExifInterface(foto.getUri());
-            String dateTime = exifInterface.getAttribute(ExifInterface.TAG_DATETIME);
-
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy:MM:dd HH:mm:ss");
-
+        if (foto.getFotoId() == 0){
             try {
-                LocalDateTime localDateTime = LocalDateTime.parse(dateTime, formatter);
-                updateDate(localDateTime);
-                updateTime(localDateTime);
-            } catch (DateTimeParseException e) {
+                ExifInterface exifInterface = new ExifInterface(foto.getUri());
+                String dateTime = exifInterface.getAttribute(ExifInterface.TAG_DATETIME);
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy:MM:dd HH:mm:ss");
+
+                try {
+                    LocalDateTime localDateTime = LocalDateTime.parse(dateTime, formatter);
+                    updateDate(localDateTime);
+                    updateTime(localDateTime);
+                } catch (DateTimeParseException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(dateTime);
+
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-            System.out.println(dateTime);
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            updateTime(foto.getDataHora());
+            updateDate(foto.getDataHora());
         }
     }
 
