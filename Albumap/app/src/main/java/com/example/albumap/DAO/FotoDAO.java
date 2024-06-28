@@ -20,8 +20,16 @@ public interface FotoDAO {
     @Transaction
     @Query("select * from foto where fotoId = :fotoId")
     FotoWithTags getFotoWithTags(long fotoId);
+
+    @Transaction
+    @Query("select * from foto where fotoId")
+    List<FotoWithTags> GetAllFotoWithTags();
+
     @Query("select * from foto")
     List<Foto> getAllFoto();
+
+    @Query("select * from foto where fotoId = :fotoId")
+    Foto getFotoById(long fotoId);
 
 
 }

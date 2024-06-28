@@ -5,7 +5,7 @@
     <color name="white90">#FFDEDEDE</color>
     <color name="white95">#FFF0F0F0</color>
     <color name="white100">#FFFFFFFF</color>
-    <color name="red">#9C0A0A</color>
+    <color name="destructive">#9C0A0A</color>
     <color name="primary">#FF1866B5</color>
 
 </resources>

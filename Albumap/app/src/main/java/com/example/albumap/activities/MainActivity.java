@@ -48,27 +48,22 @@ public class MainActivity extends AppCompatActivity {
         binding.btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String email = edtEmail.getText().toString();
-//                String senha = edtSenha.getText().toString();
-//
-//                Usuario usuario = usuarioDAO.login(email, senha);
-//
-//                if (usuario != null) {
-//                    edtEmail.setText("");
-//                    edtSenha.setText("");
-//
-//                    app.setUsuarioEmSessao(usuario);
-//                    Intent intent = new Intent(MainActivity.this, MapActivity.class);
-//                    startActivity(intent);
-//                } else {
-//                    toaster.Short("Credenciais inválidas");
-//                    edtSenha.setText("");
-//                }
+                String email = edtEmail.getText().toString();
+                String senha = edtSenha.getText().toString();
 
-                app.setUsuarioEmSessao(usuarioDAO.getUsuario(1));
-                Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                startActivity(intent);
+                Usuario usuario = usuarioDAO.login(email, senha);
 
+                if (usuario != null) {
+                    edtEmail.setText("");
+                    edtSenha.setText("");
+
+                    app.setUsuarioEmSessao(usuario);
+                    Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                    startActivity(intent);
+                } else {
+                    toaster.Short("Credenciais inválidas");
+                    edtSenha.setText("");
+                }
             }
         });
 

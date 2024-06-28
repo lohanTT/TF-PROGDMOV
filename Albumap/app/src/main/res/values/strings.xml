@@ -1,4 +1,5 @@
 <resources>
+    <string name="google_maps_API_key">AIzaSyAnclMgW0uZLGNEYGY0byRSALR_Fhs350w</string>
     <string name="app_name">Albumap</string>
     <string name="entrar">Entrar</string>
     <string name="sair">Sair</string>
@@ -7,6 +8,7 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="cadastrese">Cadastre-se agora</string>
 
+    <string name="fab_filter">Filtrar</string>
     <string name="fab_add">Adicionar</string>
     <string name="fab_camera">Usar câmera</string>
     <string name="fab_gallery">Escolher da galeria</string>
@@ -15,13 +17,21 @@
     <string name="add_descricao">Escreva uma legenda marcante!</string>
 
     <string name="lbl_dataHora">Data e hora</string>
-    <string name="add_dataHora">Quando você tirou essa foto?</string>
+    <string name="add_data">DD/MM/AAAA</string>
+    <string name="add_hora">HH:MM</string>
 
     <string name="lbl_localizacao">Localização</string>
     <string name="add_localizacao">Onde você tirou essa foto?</string>
 
+    <string name="lbl_tag">Tags</string>
+    <string name="add_tag">Adicione tags para sua foto!</string>
+    <string name="no_tag">Você ainda não criou nenhuma tag...</string>
+    <string name="create_tag">Criar tag!</string>
+    <string name="edit_tag_descricao">Um nome para sua tag</string>
+    <string name="filter_tag">Adicione tags para filtrar!</string>
 
 
+    <string name="cor">Cor</string>
 
     <string name="cliente">Cliente</string>
     <string name="nome">Nome</string>
@@ -34,6 +44,8 @@
     <string name="AlterarSenha">Alterar senha</string>
     <string name="SenhaAtual">Senha atual</string>
     <string name="id">ID:</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="apagar">Apagar</string>
     <string name="ConfirmarSenha">Confirmar senha</string>
     <string name="CredenciaisInvalidas">Credenciais inválidas</string>
     <string name="EmailIndisponivel">Email indisponível</string>
@@ -88,4 +100,6 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

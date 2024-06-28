@@ -17,16 +17,16 @@ public class Foto implements Serializable {
     String descricao;
     @Nullable
     LocalDateTime dataHora;
-    double coordX;
-    double coordY;
+    public  double latitude;
+    public double longitude;
 
-    public Foto(long fotoId, String uri, @Nullable String descricao, @Nullable LocalDateTime dataHora, double coordX, double coordY) {
+    public Foto(long fotoId, String uri, @Nullable String descricao, @Nullable LocalDateTime dataHora, double latitude, double longitude) {
         this.fotoId = fotoId;
         this.uri = uri;
         this.descricao = descricao;
         this.dataHora = dataHora;
-        this.coordX = coordX;
-        this.coordY = coordY;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public long getFotoId() {
@@ -63,19 +63,19 @@ public class Foto implements Serializable {
         this.dataHora = dataHora;
     }
 
-    public double getCoordX() {
-        return coordX;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setCoordX(double coordX) {
-        this.coordX = coordX;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 
-    public double getCoordY() {
-        return coordY;
+    public double getlongitude() {
+        return longitude;
     }
 
-    public void setCoordY(double coordY) {
-        this.coordY = coordY;
+    public void setlongitude(double longitude) {
+        this.longitude = longitude;
     }
 }

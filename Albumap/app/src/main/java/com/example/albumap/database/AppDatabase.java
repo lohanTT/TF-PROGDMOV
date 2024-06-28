@@ -17,7 +17,7 @@ import com.example.albumap.entities.Tag;
 import com.example.albumap.entities.Usuario;
 import com.example.albumap.entities.relations.FotoTagCrossRef;
 
-@Database(entities = {Usuario.class, Foto.class, Tag.class, FotoTagCrossRef.class}, version = 2, exportSchema = false)
+@Database(entities = {Usuario.class, Foto.class, Tag.class, FotoTagCrossRef.class}, version = 9, exportSchema = false)
 @TypeConverters({Converters.class})
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase INSTANCE;
